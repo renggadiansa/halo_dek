@@ -42,6 +42,7 @@
                 />
             
             <TextView
+                android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -113,17 +114,29 @@
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"
             />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSignUp"
+        <FrameLayout
+            android:id="@+id/layoutImage"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
-            android:text="@string/sign_up"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold"
-            app:cornerRadius="@dimen/_8sdp"/>
+            android:animateLayoutChanges="true"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_8sdp"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"/>
+        </FrameLayout>
 
         <TextView
             android:id="@+id/textSignIn"
