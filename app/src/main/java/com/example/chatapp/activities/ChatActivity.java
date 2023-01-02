@@ -98,7 +98,7 @@ public class ChatActivity extends AppCompatActivity {
                     chatMessages.add(chatMessage);
                 }
             }
-            Collections.sort(chatMessages, (o1, o2) -> o1.dateObject.compareTo(o2.dateObject));
+            Collections.sort(chatMessages, (obj1, obj2) -> obj1.dateTime.compareTo(obj2.dateTime));
             if(count == 0) {
                 chatAdapter.notifyDataSetChanged();
             } else {
